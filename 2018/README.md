@@ -12,7 +12,10 @@ Free-Response Questions | Scoring Guidelines<p>Chief Reader Report<p>Scoring Sta
 ## Questions
 
 ### Question 1 - Frog Simulation
-
+This question involves reasoning about a simulation of a frog hopping in a straight line. The frog attempts
+to hop to a goal within a specified number of hops. The simulation is encapsulated in the following
+FrogSimulation class. You will write two of the methods in this class.
+ 
 #### Question A
 Write the simulate method, which simulates the frog attempting to hop in a straight line to a goal from
 the frog's starting position of 0 within a maximum number of hops. The method returns true if the frog
@@ -70,4 +73,72 @@ of what you wrote in part (a). You must use simulate appropriately to receive fu
      */
     public double runSimulations(int num)
 ```
- 
+
+### Question 2 - WordPress
+This question involves reasoning about pairs of words that are represented by the following WordPair class.
+
+#### Question A
+Write the constructor for the WordPairList class. The constructor takes an array of strings words as
+a parameter and initializes the instance variable allPairs to an ArrayList of WordPair objects.
+
+A WordPair object consists of a word from the array paired with a word that appears later in the array.
+The allPairs list contains WordPair objects (words{i}, words{j}) for every i and j, 
+where 0<=i<=j<words.length. Each WordPair object is added exactly once to the list.
+
+The following examples illustrate two different WordPairList objects.
+
+##### Example 1
+String[] wordNums = {"one", "two", "three"};<p>
+WordPairList exampleOne = new WordPairList(wordNums);
+
+After the code segment has executed, the allPairs instance variable of exampleOne will contain
+the following WordPair objects in some order.
+
+    ("one", "two"), ("one", "three"), ("two", "three")
+    
+##### Example 2
+String[] phrase = {"the", "more", "the", "merrier"};<p>
+WordPairList exampleTwo = new WordPairList(phrase);
+
+After the code segment has executed, the allPairs instance variable of exampleTwo will contain
+the following WordPair objects in some order.
+
+    ("the", "more"), ("the", "the"), ("the", "merrier")
+    ("more", "the"), ("more", "merrier"), ("the", "merrier")
+
+Complete the WordPairList constructor below.
+
+```
+    /** Constructs a WordPairList object as described in part (a).
+     *  Precondition: words.length >= 2
+     */
+    public WordPairList(String[] words)
+```
+
+
+#### Question B
+Write the WordPairList method numMatches. This method returns the number of WordPair
+objects in allPairs for which the two strings match.
+
+For example, the following code segment creates a WordPairList object.
+
+String[] moreWords = {"the", "red", "fox", "the", "red"};
+WordPairList exampleThree = new WordPairList(moreWords);
+
+After the code segment has executed, the allPairs instance variable of exampleTwo will contain
+the following WordPair objects in some order. The pairs in which the first string matches the second
+string are **bold** for illustration.
+
+    ("the", "red"), ("the", "fox"), **("the", "the")**,
+    ("the", "red"), ("red", "fox"), ("red", "the"),
+    **("red", "red")**, ("fox", "the"), ("fox", "red"),
+    ("the", "red") 
+    
+The call exampleThree.numMatches() should return 2.
+
+Complete method numMatches below.
+```
+    /** Returns the number of matches as described in part (b).
+     */
+    public int numMatches()
+```

@@ -182,10 +182,10 @@ bounds are 6 and 20, inclusive.
 
 Method call|Return value|Explanation|
 -----------|------------|-----------|
-sc1.isValid("MyPass")|true|The code word is valid.
-sc1.isValid("Mypassport")|false|The code word contains "pass". 
-sc1.isValid("happy")|false|The code word is too short.
-sc1.isValid("1,000,000,000,000,000")|false|The code word is too long.
+sc2.isValid("MyPass")|true|The code word is valid.
+sc2.isValid("Mypassport")|false|The code word contains "pass". 
+sc2.isValid("happy")|false|The code word is too short.
+sc2.isValid("1,000,000,000,000,000")|false|The code word is too long.
 
 Write the complete CodeWordChecker class. Your implementation must meet all specifications and
 conform to all examples.
@@ -209,7 +209,7 @@ int[][] arr2D = { { 0, 1, 2 },
                   { 6, 7, 8 },
                   { 9, 5, 3 } };
         
-int[] result = ArrayTester.getColumn(arr2d, 1);
+int[] result = ArrayTester.getColumn(arr2D, 1);
 ```
 
 When the code segment has completed execution, the variable result will have the following contents.

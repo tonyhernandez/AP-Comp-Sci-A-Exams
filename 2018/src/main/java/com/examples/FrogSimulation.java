@@ -1,5 +1,7 @@
 package com.examples;
 
+import java.util.Random;
+
 /**
  * This question involves reasoning about a simulation of a frog hopping in a straight line. The frog attempts
  * to hop to a goal within a specified number of hops. The simulation is encapsulated in the following
@@ -25,8 +27,13 @@ public class FrogSimulation {
     /** Returns an integer representing the distance, in inches, to be moved when the frog hops.
      */
     private int hopDistance() {
-        /* implementation not shown */
-        return 0;
+        /* sample implementation - not the one used during the test */
+        Random r = new Random();
+        int dist = r.nextInt(10);
+        if(r.nextBoolean())
+            return dist;
+        else
+            return dist * -1;
     }
 
     /** Simulates a frog attempting to reach the goal as described in part (a).
@@ -34,7 +41,23 @@ public class FrogSimulation {
      *          false otherwise.
      */
     public boolean simulate() {
-        /* to be implemented in part (a) */
+
+        int distanceMoved = 0;
+        int hopCount = 0;
+        while (hopCount < maxHops) {
+
+            distanceMoved += hopDistance();
+            System.out.println(distanceMoved);
+            if(distanceMoved < 0) {
+                System.out.println("false");
+                return false;
+            } else if(distanceMoved >= goalDistance) {
+                System.out.println("true");
+                return true;
+            }
+            hopCount++;
+        }
+        System.out.println("false");
         return false;
     }
 
@@ -43,8 +66,14 @@ public class FrogSimulation {
      *  Precondition: num > 0
      */
     public double runSimulations(int num) {
-        /* to be implemented in part (b) */
-        return 0;
+
+        int successfulCount = 0;
+        for(int i = 0; i < num; i++) {
+            if(simulate()) {
+                successfulCount++;
+            }
+        }
+        return (double) successfulCount/num;
     }
 }
 

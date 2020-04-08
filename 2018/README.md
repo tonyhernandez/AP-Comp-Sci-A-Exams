@@ -6,7 +6,7 @@
 
 Questions | Scoring | Samples and Commentary | Score Distributions |
 --------- | ------- | ---------------------- | ------------------- |
-Free-Response Questions | Scoring Guidelines<p>Chief Reader Report<p>Scoring Statistics|Sample Responses Q1<p>Sample Responses Q2<p>Sample Responses Q3<p>Sample Responses Q4|Scoring Distributions
+[Free-Response Questions](https://secure-media.collegeboard.org/apc/ap18-frq-computer-science-a.pdf)|[Scoring Guidelines](https://secure-media.collegeboard.org/ap/pdf/ap18-sg-comp-sci-a.pdf)<p>[Chief Reader Report](https://apcentral.collegeboard.org/pdf/ap18-computer-science-a-chief-reader-report.pdf)<p>[Scoring Statistics](https://apcentral.collegeboard.org/pdf/ap18-computer-science-a-scoring-statistics.pdf)|[Sample Responses Q1](https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap18-computer-science-a-q1.pdf)<p>[Sample Responses Q2](https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap18-computer-science-a-q2.pdf)<p>[Sample Responses Q3](https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap18-computer-science-a-q3.pdf)<p>[Sample Responses Q4](https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap18-computer-science-a-q1.pdf)|[Scoring Distributions](https://apcentral.collegeboard.org/pdf/ap18-computer-science-a-score-distribution.pdf)
 
 
 ## Questions

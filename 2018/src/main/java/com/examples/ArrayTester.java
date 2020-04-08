@@ -8,8 +8,12 @@ public class ArrayTester {
      *  Postcondition: arr2D is unchanged.
      */
     public static int[] getColumn(int[][] arr2D, int c) {
-        /* to be implemented in part (a) */
-        return null;
+
+        int[] column = new int[arr2D.length];
+        for(int row = 0; row < arr2D.length; row++) {
+            column[row] = arr2D[row][c];
+        }
+        return column;
     }
 
     /** Returns true if and only if every value in arr1 appears in arr2.
@@ -17,15 +21,33 @@ public class ArrayTester {
      *  Postcondition: arr1 and arr2 are unchanged.
      */
     public static boolean hasAllValues(int[] arr1, int[] arr2) {
-        /* implementation not shown */
-        return false;
+        /* sample implementation */
+        for(int i = 0; i < arr1.length; i++) {
+            boolean foundValue = false;
+            for(int j = 0; j < arr2.length; j++) {
+                if(arr1[i] == arr2[j]) {
+                    foundValue = true;
+                }
+            }
+            if(!foundValue) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /** Returns true if arr contains any duplicate values;
      *          false otherwise.
      */
     public static boolean containsDuplicates(int[] arr) {
-        /* implementation not shown */
+        /* sample implementation */
+        for(int i = 0; i < arr.length - 1; i++) {
+            for(int j = i + 1; j < arr.length; j++) {
+                if(arr[i] == arr[j]) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
@@ -35,7 +57,29 @@ public class ArrayTester {
      *                 square has at least one row.
      */
     public static boolean isLatin(int[][] square) {
-        /* to be implemented in part (b) */
-        return false;
+
+        // Checks the first row has no duplicate values
+        if(containsDuplicates(square[0])) {
+            return false;
+        }
+
+        // Checks all values in the first row of the square appear in each row of the square
+        for(int i = 1; i < square.length; i++) {
+
+            if(!hasAllValues(square[0],square[i])){
+                return false;
+            }
+        }
+
+        // Checks all values in the first row of the sqaure appear in each column of the square
+        for(int i = 0; i < square.length; i++) {
+
+            int[] column = getColumn(square, i);
+            if(!hasAllValues(square[0],column)){
+                return false;
+            }
+        }
+
+        return true;
     }
 }

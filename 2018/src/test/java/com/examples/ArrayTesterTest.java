@@ -8,7 +8,8 @@ public class ArrayTesterTest {
     @Test
     public void testGetColumn() {
 
-        int[][] arr2D = { { 0, 1, 2 },
+        int[][] arr2D = {
+                { 0, 1, 2 },
                 { 3, 4, 5 },
                 { 6, 7, 8 },
                 { 9, 5, 3 } };
@@ -24,11 +25,23 @@ public class ArrayTesterTest {
     @Test
     public void testLatinSquares() {
 
-        int[][] square = { { 1, 2, 3 },
+        int[][] square = {
+                { 1, 2, 3 },
                 { 2, 3, 1 },
                 { 3, 1, 2 } };
 
         Assert.assertTrue(ArrayTester.isLatin(square));
+    }
+
+    @Test
+    public void testNotLatinSquare() {
+
+        int[][] square = {
+                { 1, 2, 1},
+                { 2, 1, 1},
+                { 1, 1, 2} };
+
+        Assert.assertFalse(ArrayTester.isLatin(square));
     }
 
 }
